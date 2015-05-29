@@ -19,8 +19,8 @@
         // Any missing elements here will cause an error:
         //      WinRTError: The system cannot find the file specified.
         var specRunner = new Hilo.SpecRunner({
-            src: "specs",
-            specs: "specs",
+            src: "includes/source",
+            specs: "includes/specs",
             helpers: "js/helpers"
         });
 
