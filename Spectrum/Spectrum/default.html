@@ -1,19 +1,52 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>Spectrum</title>
+    <title>HiloJS Spec Runner</title>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <!--  
+        Since this app is just our test harness, we don't need to use the default styles.
+        <link href="//Microsoft.WinJS.1.0.RC/css/ui-dark.css" rel="stylesheet" />
+    -->
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
-    <!-- Spectrum references -->
-    <link href="/css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/lib/mocha.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <script src="/lib/mocha.js"></script>
+    <script src="/lib/chai.js"></script>
+    <script src="/lib/sinon-chai.js"></script>
+    <script src="/lib/sinon.js"></script>
+    <!-- spec framework references -->
+
+    <script src="/js/specRunner.js"></script>
+
+    <!-- Page Controller To Run Specs -->
     <script src="/js/default.js"></script>
 </head>
+
 <body>
-    <p>Content goes here</p>
+
+    <div id="contentHost"
+        data-win-control="Hilo.PageControlNavigator"
+        data-win-options="{home: '/placeholder.html'}"
+        style="position: absolute; height: 800px; width: 600px; overflow: hidden; opacity: 0">
+    </div>
+
+    <div id="mocha">
+        <!-- This div is a hook for the test harness. -->
+    </div>
+
+    <div id="errors">
+        <div id="close" onClick="document.querySelector('#errors').style.display='none'">X</div>
+        <h1>Error Running The Test Suite</h1>
+        <p>
+            Errors have occurred outside of the test runner. Please correct the follow items and re-run
+            the test suite.
+        </p>
+        <ul></ul>
+    </div>
+
 </body>
+
 </html>

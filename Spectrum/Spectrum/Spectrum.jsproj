@@ -47,14 +47,19 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    
     <PackageCertificateKeyFile>Spectrum_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <!-- Link your project in here. -->
+    <!--
+    <Content Include="..\Host\lib\*.js">
+      <Link>include\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    `-->
     <Content Include="default.html" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
@@ -62,9 +67,15 @@
     <Content Include="images\storelogo.png" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
-    
+    <Content Include="js\helpers\spec.helpers.js" />
+    <Content Include="js\specRunner.js" />
+    <Content Include="lib\chai.js" />
+    <Content Include="lib\mocha.css" />
+    <Content Include="lib\mocha.js" />
+    <Content Include="lib\sinon-chai.js" />
+    <Content Include="lib\sinon.js" />
+    <Content Include="specs\self.js" />
     <None Include="Spectrum_TemporaryKey.pfx" />
-    
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />

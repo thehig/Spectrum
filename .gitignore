@@ -1,0 +1,5 @@
+bld
+bin
+/Spectrum/Spectrum/Spectrum.jsproj.user
+*.suo
+*.sublime-workspace
