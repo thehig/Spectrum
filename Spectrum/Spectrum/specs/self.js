@@ -1,56 +1,58 @@
-﻿describe("Core Testing Framework (Mocha, Chai)", function () {
-    it("should pass a basic chai expectation", function () {
-        expect(true).to.be.true;
-    });
+﻿describe("Specturm Mocha spec-runner self tests", function() {
 
-    it.skip("should skip the failing basic chai expectation", function () {
-        expect(false).to.be.true;
-    });
-});
-
-describe("sinon fake server", function () {
-
-    var server;
-
-    beforeEach(function () {
-        server = sinon.fakeServer.create()
-        server.respondWith("GET", "http://www.example.com/test",
-            [200, { "Content-Type": "application/json" }, "{ retailers: 'success' }"])
-    });
-
-    it("should return the expected mock data (chai expect)", function (done) {
-        var callback = sinon.spy();
-
-        WinJS.xhr({
-            url: "http://www.example.com/test"
-        })
-        .then(function (msg) {
-            return msg.responseText;
-        })
-        .then(callback)
-        .then(function () {
-            expect(callback.calledWith("{ retailers: 'success' }")).to.be.true;
-            done();
+    describe("core testing framework", function () {
+        it("should pass a basic chai expectation", function () {
+            expect(true).to.be.true;
         });
 
-        server.respond();
+        it.skip("should skip the failing basic chai expectation", function () {
+            expect(false).to.be.true;
+        });
     });
 
-    it.skip("should return the expected mock data (sinon-chai expect)", function (done) {
-        var callback = sinon.spy();
+    describe("sinon server", function () {
+        var server;
 
-        WinJS.xhr({
-            url: "http://www.example.com/test"
-        })
-        .then(function (msg) {
-            return msg.responseText;
-        })
-        .then(callback)
-        .then(function () {
-            expect(callback).to.have.been.calledWith("{ retailers: 'sucscess' }");
-            done();
+        beforeEach(function () {
+            server = sinon.fakeServer.create();
+            server.respondWith("GET", "http://www.example.com/test",
+                [200, { "Content-Type": "application/json" }, "{ retailers: 'success' }"]);
         });
 
-        server.respond();
+        it("should return the expected mock data (chai expect)", function (done) {
+            var callback = sinon.spy();
+
+            WinJS.xhr({
+                url: "http://www.example.com/test"
+            })
+            .then(function (msg) {
+                return msg.responseText;
+            })
+            .then(callback)
+            .then(function () {
+                expect(callback.calledWith("{ retailers: 'success' }")).to.be.true;
+                done();
+            });
+
+            server.respond();
+        });
+
+        it("should return the expected mock data (sinon-chai expect)", function (done) {
+            var callback = sinon.spy();
+
+            WinJS.xhr({
+                url: "http://www.example.com/test"
+            })
+            .then(function (msg) {
+                return msg.responseText;
+            })
+            .then(callback)
+            .then(function () {
+                expect(callback).to.have.been.calledWith("{ retailers: 'success' }");
+                done();
+            });
+
+            server.respond();
+        });
     });
 });
