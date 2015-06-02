@@ -15,21 +15,24 @@
     
     function runSpecs() {
 
+        var specRunner;
+        var runLinkedTests = false;
 
-        // Any missing elements here will cause an error:
-        //      WinRTError: The system cannot find the file specified.
-        var specRunner = new Hilo.SpecRunner({
-            src: "includes/source",
-            specs: "includes/specs",
-            helpers: "js/helpers"
-        });
-
-
-        //var specRunner = new Hilo.SpecRunner({
-        //    src: "include/src",
-        //    specs: "include/spec",
-        //    helpers: "js/helpers"
-        //});
+        if (runLinkedTests) {
+            // Any missing elements here will cause an error:
+            //      WinRTError: The system cannot find the file specified.
+            specRunner = new Hilo.SpecRunner({
+                src: "includes/source",
+                specs: "includes/specs",
+                helpers: "js/helpers"
+            });
+        } else {
+            specRunner = new Hilo.SpecRunner({
+                src: "js",
+                specs: "specs",
+                helpers: "js/helpers"
+            });
+        }
 
         // Handle any errors in the execution that
         // were not part of a failing test

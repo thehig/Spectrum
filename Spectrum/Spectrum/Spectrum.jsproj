@@ -60,17 +60,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     -->
-
     <Content Include="..\..\..\oauth-lib-test\js\**\*.js">
       <Link>includes\source\%(RecursiveDir)%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-
     <Content Include="..\..\..\oauth-lib-test\specs\**\*.js">
       <Link>includes\specs\%(RecursiveDir)%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    
     <Content Include="default.html" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
@@ -87,7 +84,8 @@
     <Content Include="lib\require\require-config.js" />
     <Content Include="lib\sinon-chai.js" />
     <Content Include="lib\sinon.js" />
-    <Content Include="specs\self.js" />
+    <Content Include="specs\self.spec.js" />
+    <Content Include="specs\sinon.spec.js" />
     <None Include="Spectrum_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
