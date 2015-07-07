@@ -8,8 +8,12 @@
     top: 0px;
     left: 0px;
     display: none;
+    width: 90vw;
 }
-
+    #errors ul li{
+        width: 80vw;
+        word-wrap: break-word;
+    }
     #errors #close {
         position: absolute;
         top: 0px;
