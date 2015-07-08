@@ -3,14 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Spectrum", "Spectrum\Spectrum.jsproj", "{765CD0EB-7B86-411B-BC76-06A165CEC9A9}"
 EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Spectrum-Durango", "Spectrum\Spectrum-Durango.jsproj", "{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
+		Debug|Durango = Debug|Durango
+		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
 		Release|ARM = Release|ARM
+		Release|Durango = Release|Durango
+		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
@@ -21,6 +27,10 @@ Global
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|ARM.ActiveCfg = Debug|ARM
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|ARM.Build.0 = Debug|ARM
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|ARM.Deploy.0 = Debug|ARM
+		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|Durango.ActiveCfg = Debug|Any CPU
+		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|Mixed Platforms.Deploy.0 = Debug|x86
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|x64.ActiveCfg = Debug|x64
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|x64.Build.0 = Debug|x64
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Debug|x64.Deploy.0 = Debug|x64
@@ -33,12 +43,36 @@ Global
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|ARM.ActiveCfg = Release|ARM
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|ARM.Build.0 = Release|ARM
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|ARM.Deploy.0 = Release|ARM
+		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|Durango.ActiveCfg = Release|Any CPU
+		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|Mixed Platforms.Build.0 = Release|x86
+		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|Mixed Platforms.Deploy.0 = Release|x86
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|x64.ActiveCfg = Release|x64
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|x64.Build.0 = Release|x64
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|x64.Deploy.0 = Release|x64
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|x86.ActiveCfg = Release|x86
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|x86.Build.0 = Release|x86
 		{765CD0EB-7B86-411B-BC76-06A165CEC9A9}.Release|x86.Deploy.0 = Release|x86
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|Any CPU.ActiveCfg = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|ARM.ActiveCfg = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|Durango.ActiveCfg = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|Durango.Build.0 = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|Durango.Deploy.0 = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|Mixed Platforms.ActiveCfg = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|Mixed Platforms.Build.0 = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|Mixed Platforms.Deploy.0 = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|x64.ActiveCfg = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Debug|x86.ActiveCfg = Debug|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|Any CPU.ActiveCfg = Release|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|ARM.ActiveCfg = Release|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|Durango.ActiveCfg = Release|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|Durango.Build.0 = Release|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|Durango.Deploy.0 = Release|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|Mixed Platforms.ActiveCfg = Release|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|Mixed Platforms.Build.0 = Release|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|Mixed Platforms.Deploy.0 = Release|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|x64.ActiveCfg = Release|Durango
+		{954A84DE-EEEC-4CB7-879A-81A2CB57CC1A}.Release|x86.ActiveCfg = Release|Durango
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

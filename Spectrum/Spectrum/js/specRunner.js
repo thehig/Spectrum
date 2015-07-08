@@ -53,11 +53,16 @@
             this.appFolder = Windows.ApplicationModel.Package.current.installedLocation;
             this.configureMocha();
 
-            this.injectHelpers()
-                .then(this.injectPageControls.bind(this))
-                .then(this.injectSpecList.bind(this))
-                .then(this.startTestHarness.bind(this))
-                .done(null, this.triggerError.bind(this));
+            if (Windows && Windows.Xbox) {
+                global.mocha.run();
+            }
+            else {
+                this.injectHelpers()
+                    .then(this.injectPageControls.bind(this))
+                    .then(this.injectSpecList.bind(this))
+                    .then(this.startTestHarness.bind(this))
+                    .done(null, this.triggerError.bind(this));
+            }
         },
 
         // If an error occurred, dispatch it so that the
@@ -193,7 +198,7 @@
 
     // Public API
     // ----------
-
+    
     WinJS.Namespace.define("Hilo", {
         SpecRunner: WinJS.Class.mix(SpecRunner, specRunnerMethods, WinJS.Utilities.eventMixin)
     });
