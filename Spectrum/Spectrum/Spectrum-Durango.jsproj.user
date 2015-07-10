@@ -3,5 +3,6 @@
   <PropertyGroup>
     <ShowAllFiles>true</ShowAllFiles>
     <LastConfigDeployed>Debug</LastConfigDeployed>
+    <ReferenceCachePath>C:\Users\David\AppData\Local\Temp\fblx2r4d_Spectrum-Durango_refcache</ReferenceCachePath>
   </PropertyGroup>
 </Project>

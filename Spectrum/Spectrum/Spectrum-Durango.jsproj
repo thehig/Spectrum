@@ -43,6 +43,15 @@
     <Content Include="lib\sinon.js" />
     <Content Include="specs\self.spec.js" />
     <Content Include="specs\sinon.spec.js" />
+
+    <Content Include="..\..\..\oauth-lib-test\js\**\*.js">
+      <Link>includes\source\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\oauth-lib-test\specs\**\*.js">
+      <Link>includes\specs\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment

@@ -24,6 +24,26 @@
 
     <script src="/js/specRunner.js"></script>
 
+
+    <script src="includes/source/lib/Crypto-HMACSHA1.js"></script>
+    <script src="includes/source/lib/oauth-signature.js"></script>
+    <script src="includes/source/src/oaclient.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Page Controller To Run Specs -->
     <script src="/js/default.js"></script>
 </head>
@@ -52,8 +72,28 @@
 
     
     <script>mocha.setup('bdd')</script>
+<!--    
     <script src="specs/self.spec.js"></script>
     <script src="specs/sinon.spec.js"></script>
+-->
+    
+    <script src="includes/specs/000.oauthenticate.spec.js"></script>
+    <script src="includes/specs/010.utilities.oauthlib.spec.js"></script>
+    
+    <script src="includes/specs/050.verified.oauthlib.spec.js"></script>
+    <script src="includes/specs/100.oauthenticate.oauthlib.spec.js"></script>
+    
+    <script src="includes/specs/200.initiate.oauthlib.spec.js"></script>
+    <script src="includes/specs/210.prepare.initiate.oauthlib.spec.js"></script>
+
+    <script src="includes/specs/300.authenticate.oauthlib.spec.js"></script>
+    <script src="includes/specs/310.prepare.authenticate.oauthlib.spec.js"></script>
+    
+    <script src="includes/specs/400.verify.oauthlib.spec.js"></script>
+    <script src="includes/specs/410.prepare.verify.oauthlib.spec.js"></script>
+
+    
+    <script src="includes/specs/500.useToken.oauthlib.spec.js"></script>
 
 </body>
 
