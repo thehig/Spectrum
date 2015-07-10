@@ -16,7 +16,7 @@
     function runSpecs() {
 
         var specRunner;
-        var runLinkedTests = false;
+        var runLinkedTests = true;
 
         if (runLinkedTests) {
             // Any missing elements here will cause an error:
